@@ -19,8 +19,15 @@ jobs:
       run: npx playwright install --with-deps
     - name: Build
       run: npm run build
+    - name: Checkout API Server
+      uses: actions/checkout@v4
+      with:
+        repository: MikeJerred/points-api-server
+        path: points-api-server
     - name: Run Playwright tests
-      run: npm test
+      run: |
+        cd points-api-server && npm ci && npm start &
+        npm test
     - uses: actions/upload-artifact@v4
       if: always()
       with:
