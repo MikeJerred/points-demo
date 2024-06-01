@@ -9,9 +9,9 @@
     "lint": "next lint"
   },
   "dependencies": {
-    "@absinthe-points/sdk": "file:../points-sdk",
     "@emotion/react": "^11.11.4",
     "@emotion/styled": "^11.11.5",
+    "@mikejerred/points-sdk": "^1.0.1",
     "@mui/icons-material": "^5.15.19",
     "@mui/material": "^5.15.19",
     "@mui/material-nextjs": "^5.15.11",

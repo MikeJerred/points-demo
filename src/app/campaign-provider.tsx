@@ -2,7 +2,7 @@
 
 import { createContext, useEffect, useState } from 'react';
 
-import { Client, createClient } from '@absinthe-points/sdk';
+import { Client, createClient } from '@mikejerred/points-sdk';
 
 export type CampaignData = {
   apiKey: string;

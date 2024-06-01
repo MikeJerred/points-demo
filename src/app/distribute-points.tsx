@@ -44,7 +44,7 @@ export default function DistributePoints() {
 
       campaign.client.distributePoints(
         eventName!,
-        { points: +points!, address: address as `0x${string}` }
+        { points: +points!, address: address as `0x${string}` },
       ).then(() => {
 
       });

@@ -4,7 +4,7 @@ import { Add, Delete } from '@mui/icons-material';
 import { Box, Button, TextField } from '@mui/material';
 import { useContext } from 'react';
 
-import { createCampaign, createClient } from '@absinthe-points/sdk';
+import { createCampaign, createClient } from '@mikejerred/points-sdk';
 import { CampaignContext } from './campaign-provider';
 
 export default function Campaign() {
