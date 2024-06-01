@@ -36,7 +36,7 @@ jobs:
         POSTGRES_USER: ${{ secrets.POSTGRES_USER }}
       run: |
         cd points-api-server && npm ci && npm start &
-        wait-on http://localhost:8000 && npm test
+        npx wait-on tcp:8080 && npm test
     - uses: actions/upload-artifact@v4
       if: always()
       with:
