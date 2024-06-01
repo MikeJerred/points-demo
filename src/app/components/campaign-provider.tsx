@@ -37,11 +37,9 @@ export default function CampaignProvider({
         localStorage?.removeItem('campaign');
       }
     }
-  }, [campaign]);
+  }, [campaign, isClient]);
 
   useEffect(() => {
-    setIsClient(true);
-
     const json = localStorage?.getItem('campaign');
     if (json) {
       const data = JSON.parse(json);
@@ -53,6 +51,8 @@ export default function CampaignProvider({
     } else {
       setCampaign(null);
     }
+
+    setIsClient(true);
   }, []);
 
   return (
