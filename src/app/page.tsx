@@ -5,10 +5,10 @@ import {
   Typography,
 } from '@mui/material';
 
-import Campaign from './campaign';
-import CampaignProvider from './campaign-provider';
-import DisplayPoints from './display-points';
-import DistributePoints from './distribute-points';
+import Campaign from './components/campaign';
+import CampaignProvider from './components/campaign-provider';
+import DisplayPoints from './components/display-points';
+import DistributePoints from './components/distribute-points';
 
 const drawerWidth = 200;
 

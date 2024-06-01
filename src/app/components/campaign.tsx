@@ -34,6 +34,7 @@ export default function Campaign() {
           ? <>
             <TextField
               id="api-key-ctrl"
+              data-testid="api-key-ctrl"
               name="api"
               label="API Key"
               multiline
@@ -48,9 +49,23 @@ export default function Campaign() {
               disabled
             />
 
-            <Button variant="outlined" startIcon={<Delete />} onClick={forgetCampaign}>Forget</Button>
+            <Button
+              data-testid="forget-campaign-btn"
+              variant="outlined"
+              startIcon={<Delete />}
+              onClick={forgetCampaign}
+            >
+              Forget
+            </Button>
           </>
-          : <Button variant="outlined" startIcon={<Add />} onClick={createNewCampaign}>Create</Button>
+          : <Button
+            data-testid="create-campaign-btn"
+            variant="outlined"
+            startIcon={<Add />}
+            onClick={createNewCampaign}
+          >
+            Create
+          </Button>
       }
     </Box>
   );
