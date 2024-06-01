@@ -25,6 +25,15 @@ jobs:
         repository: MikeJerred/points-api-server
         path: points-api-server
     - name: Run Playwright tests
+      env:
+        POSTGRES_DATABASE: ${{ secrets.POSTGRES_DATABASE }}
+        POSTGRES_HOST: ${{ secrets.POSTGRES_HOST }}
+        POSTGRES_PASSWORD: ${{ secrets.POSTGRES_PASSWORD }}
+        POSTGRES_PRISMA_URL: ${{ secrets.POSTGRES_PRISMA_URL }}
+        POSTGRES_URL: ${{ secrets.POSTGRES_URL }}
+        POSTGRES_URL_NON_POOLING: ${{ secrets.POSTGRES_URL_NON_POOLING }}
+        POSTGRES_URL_NO_SSL: ${{ secrets.POSTGRES_URL_NO_SSL }}
+        POSTGRES_USER: ${{ secrets.POSTGRES_USER }}
       run: |
         cd points-api-server && npm ci && npm start &
         npm test
